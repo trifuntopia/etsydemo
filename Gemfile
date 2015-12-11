@@ -52,6 +52,12 @@ gem 'bootstrap-sass'
 #paperclip used to attach images to data
 gem 'paperclip'
 
+#dropbox storage
+gem "paperclip-dropbox"
+
+#keep dropbox safe
+gem "figaro"
+
 #deploy
 group :production do 
 	gem 'pg'
