@@ -1,0 +1,29 @@
+<!-- affects every page on site -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Estydemo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<!-- partial for navbar -->
+	<%= render 'layouts/header' %>
+
+	<!-- to center the page  -->
+	<div class="container">
+
+	<!-- want to appear at top of the page -->
+	<!-- <a href ="/pages/about">About </a>
+	<a href ="/pages/contact"> About </a> --> 
+	<%= yield %>
+
+<!-- want to appear at bottom of the page
+<p> Copyright 2015 </p> -->
+<%= render 'layouts/footer' %>
+</div>
+
+</body>
+</html>
